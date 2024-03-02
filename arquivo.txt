@@ -1,0 +1,8 @@
+     Popularização dos computadores pessoais: o Unix era o S.O. padrão para estudos em universidades, porém, utilizavam plataformas proprietárias relativamente caras.
+     O Linux se tornou uma opção para resolver esse problema, porque com ele foi possível a utilização de computadores pessoais mais baratos.
+     Projeto GNU: o projeto GNU, criado por Richard Stallman em 1984, surgiu com o intuito de apoiar a liberdade de software (veja seção mais adiante sobre Software Livre).
+     Na época do surgimento do Linux, Stallman apoiava e pretendia adotar o kernel Hurd, porém este não estava utilizável, com isso,
+     o Linux acabou sendo o kernel (componente central do sistema operacional ligando aplicativos e o processamento real de dados feito pelo hardware) preferido para rodar as centenas de programas livres disponibilizados pelo projeto,
+     porém o Hurd continua sendo o kernel oficial do sistema operacional GNU.
+     Distribuições Linux: no sentido de tornar o Linux o mais utilizável possível, surgiram instituições comerciais e não-comerciais que se dedicaram a criar uma combinação ideal de aplicativos (livres ou não) que rodassem no kernel Linux.
+     As instituições com objetivos comerciais mantiveram o licenciamento livre, através de serviços agregados, tais como: suporte, treinamento e desenvolvimento personalizado. Veja seção mais adiante sobre distribuições Linux.
