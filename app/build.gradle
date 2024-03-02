@@ -21,6 +21,13 @@ dependencies {
 
 
     implementation libs.guava
+    implementation files('libs/barcode.jar')
+
+
+    // https://mvnrepository.com/artifact/com.google.zxing/core
+    implementation 'com.google.zxing:core:3.5.3'
+    // https://mvnrepository.com/artifact/com.google.zxing/javase
+    implementation 'com.google.zxing:javase:3.5.3'
 }
 
 
