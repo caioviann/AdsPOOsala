@@ -1,28 +1,20 @@
 package ads.poo;
 
 public class Caneta {
-    private String cor = "Preta";
-    private int quanTinta = 100;
+    private String cor;
+    private int quanTinta;
 
-    public String getCor() {
-        return cor;
-    }
 
-    public void setCor(String cor) {
+    public Caneta(int quanTinta, String cor) {
+        this.quanTinta = quanTinta;
         this.cor = cor;
     }
 
-    public int getQuanTinta() {
-        return quanTinta;
-    }
+   public Caneta(String cor){
+        this(100, cor);
+   }
+   public Caneta(){
 
-    public void setQuanTinta(int quanTinta) {
-        this.quanTinta = quanTinta;
-    }
-
-    public String Desenhando(){
-        // TODO caneta não desenha sem tinta
-        quanTinta--;
-        return "Desenhando na cor: " + cor;
-    }
+            this(100,"vermelha");
+   }
 }
