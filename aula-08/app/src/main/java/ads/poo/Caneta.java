@@ -1,13 +1,13 @@
 package ads.poo;
 
 public class Caneta {
-    private String cor;
+    private final String COR;
     private int quanTinta;
-
+    private final String MARCA = "bic";
 
     public Caneta(int quanTinta, String cor) {
         this.quanTinta = quanTinta;
-        this.cor = cor;
+        this.COR = cor;
     }
 
    public Caneta(String cor){
@@ -15,6 +15,9 @@ public class Caneta {
    }
    public Caneta(){
 
-            this(100,"vermelha");
+            this(100,"Preta");
+   }
+   public String desenhar(){
+        return "Desenhando";
    }
 }

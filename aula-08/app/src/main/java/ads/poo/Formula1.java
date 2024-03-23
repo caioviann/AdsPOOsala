@@ -2,6 +2,8 @@ package ads.poo;
 
 public class Formula1 {
     private int velocidadeAtual;
+    private final int VEL_MAX = 200;
+
 
     public int getVelocidadeAtual() {
         return velocidadeAtual;
@@ -17,8 +19,8 @@ public class Formula1 {
 
     public int acelerar(int acl){
         velocidadeAtual  += acl;
-        if (velocidadeAtual + acl > 200){
-            return velocidadeAtual = 200;
+        if (velocidadeAtual + acl > VEL_MAX){
+            return velocidadeAtual = VEL_MAX;
         }else {
             return velocidadeAtual;
         }

@@ -20,13 +20,17 @@ public class App {
 //      Caneta pilot = new Caneta("preta");
 //      Caneta faberCastell = new Caneta();
 
-        Formula1 carro = new Formula1(150);
-        System.out.println("velocidade Atual: " + carro.getVelocidadeAtual());
+//        Formula1 carro = new Formula1(150);
+//        System.out.println("velocidade Atual: " + carro.getVelocidadeAtual());
+//
+//        carro.acelerar(100);
+//        System.out.println("velocidade: " + carro.getVelocidadeAtual());
+//        carro.frear(300);
+//        System.out.println("velocidade Atual: " + carro.getVelocidadeAtual());
 
-        carro.acelerar(100);
-        System.out.println("velocidade: " + carro.getVelocidadeAtual());
-        carro.frear(300);
-        System.out.println("velocidade Atual: " + carro.getVelocidadeAtual());
+            Caneta c = new Caneta();
+
+            c.desenhar();
 
 
 
