@@ -9,9 +9,17 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Ponto a = new Ponto(1,2);
-        Ponto b = new Ponto(3,4);
+        Ponto a = new Ponto(1.0,2.0);
+        Ponto b = new Ponto(3.0,4.0);
 
-        System.out.println(a.distancia(b));
+
+        System.out.println("Ponto 1: " + a);
+        System.out.println("Ponto 2: " + b);
+
+        System.out.println("distância: " + a.distancia(b));
+
+
+
+
     }
 }

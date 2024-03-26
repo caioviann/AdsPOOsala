@@ -6,7 +6,8 @@ public class Ponto {
 
 
     public Ponto(double x, double y) {
-
+        this.x = x;
+        this.y = y;
     }
 
     public double getX() {
@@ -25,7 +26,9 @@ public class Ponto {
         this.y = y;
     }
     public double distancia(Ponto p){
-           return Math.sqrt(Math.pow(p - this.x) + Math.pow(p - this.y));
+
+       return Math.sqrt(Math.pow((p.getX() - this.x), 2) + Math.pow((p.getY() - this.y), 2));
+
     }
 
     @Override
