@@ -7,9 +7,14 @@ public class App {
 
 
     public static void main(String[] args) {
-        Horario h = new Horario(18, 30, 00);
+
+        Horario h = new Horario();
         System.out.println(h.toString());
-        h.setHora(15);
+        h.setHora(1);
+        System.out.println(h.toString());
+        h.setMinuto(1);
+        System.out.println(h.toString());
+        h.setSegundo(56);
         System.out.println(h.toString());
     }
 }
