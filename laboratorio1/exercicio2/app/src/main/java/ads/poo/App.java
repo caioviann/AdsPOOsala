@@ -10,11 +10,11 @@ public class App {
 
         Horario h = new Horario(10,10, 11);
         System.out.println(h.toString());
-        h.setHora(23);
+        h.setHora(10);
         System.out.println(h.toString());
-        h.setMinuto(22);
+        h.setMinuto(20);
         System.out.println(h.toString());
-        h.setSegundo(22);
+        h.setSegundo(58);
         System.out.println(h.toString());
         h.converterNumeroParaExtenso();
         System.out.println(h.converterNumeroParaExtenso());

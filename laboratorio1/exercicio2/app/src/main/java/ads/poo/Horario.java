@@ -67,10 +67,33 @@ public class Horario {
     }
 
         public String converterNumeroParaExtenso() {
-            if (hora < 20 && minuto < 20 && segundo < 20) {
-                return uni[hora] + " hora(s) , " + uni[minuto] + " minuto(s) e " + uni[segundo] + " segundo(s)";
+            if(hora < 20 && minuto < 20){
+                return uni[hora] + " hora(s) , " +  uni[minuto] + " minuto(s) e "
+                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
+            } else if (hora < 20 && segundo < 20) {
+                return uni[hora] + " hora(s) , "
+                        + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
+                        + uni[segundo] + " segundo(s)";
+            } else if (minuto < 20 && segundo <20) {
+                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
+                        + uni[minuto] + " minuto(s) e" + uni[minuto] + " minuto(s)";
+
+            } else if (minuto > 19 && segundo > 19) {
+                return uni[hora] + " hora(s) , "
+                        + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
+                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
+            }else if(hora > 19 && segundo > 19){
+                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
+                        + uni[minuto] + " minuto(s)"
+                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
+            } else if (hora > 19 && minuto > 19) {
+                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
+                       + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
+                       + uni[segundo] + " segundo(s) ";
             } else {
-                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " horas , " + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] + " minutos": "") + dez[segundo / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] + " minutos": "");
+                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
+                        + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
+                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
 
             }
         }

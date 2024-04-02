@@ -9,8 +9,8 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Ponto a = new Ponto(1.0,2.0);
-        Ponto b = new Ponto(3.0,4.0);
+        Ponto a = new Ponto(419.0,-402.0);
+        Ponto b = new Ponto(2.0,1.0);
 
 
         System.out.println("Ponto 1: " + a);
