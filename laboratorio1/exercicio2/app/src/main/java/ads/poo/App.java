@@ -8,13 +8,16 @@ public class App {
 
     public static void main(String[] args) {
 
-        Horario h = new Horario();
+        Horario h = new Horario(10,10, 11);
         System.out.println(h.toString());
-        h.setHora(1);
+        h.setHora(23);
         System.out.println(h.toString());
-        h.setMinuto(1);
+        h.setMinuto(22);
         System.out.println(h.toString());
-        h.setSegundo(56);
+        h.setSegundo(22);
         System.out.println(h.toString());
+        h.converterNumeroParaExtenso();
+        System.out.println(h.converterNumeroParaExtenso());
+
     }
 }

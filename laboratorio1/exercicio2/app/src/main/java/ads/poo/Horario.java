@@ -5,18 +5,14 @@ public class Horario {
     private int hora;
     private int minuto;
     private int segundo;
-    String[] hE = {"zero", "um", "dois", "três", "quatro", "cinco",
+
+    private final String[] uni = {"zero", "um", "dois", "três", "quatro", "cinco",
             "seis", "sete", "oito", "nove", "dez", "onze",
             "doze", "treze", "quatorze", "quinze", "dezesseis",
-            "dezessete", "dezoito", "dezenove", "vinte",
-            "vinte e um", "vinte e dois", "vinte e três", "vinte e quatro"};
+            "dezessete", "dezoito", "dezenove"};
 
 
-    String[] mE = {"zero", "um", "dois", "três", "quatro", "cinco",
-            "seis", "sete", "oito", "nove", "dez", "onze",
-            "doze", "treze", "quatorze", "quinze", "dezesseis",
-            "dezessete", "dezoito", "dezenove", "vinte", "trinta", "quarenta", "cinquenta"};
-
+    private final String[] dez = {"", "", "vinte", "trinta", "quarenta", "cinquenta"};
 
 
     public Horario() {
@@ -68,10 +64,16 @@ public class Horario {
             this.segundo = s;
             return true;
         }
-
     }
 
+        public String converterNumeroParaExtenso() {
+            if (hora < 20 && minuto < 20 && segundo < 20) {
+                return uni[hora] + " hora(s) , " + uni[minuto] + " minuto(s) e " + uni[segundo] + " segundo(s)";
+            } else {
+                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " horas , " + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] + " minutos": "") + dez[segundo / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] + " minutos": "");
 
+            }
+        }
 
     // String.format
 
