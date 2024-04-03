@@ -6,13 +6,13 @@ public class Horario {
     private int minuto;
     private int segundo;
 
-    private final String[] uni = {"zero", "um", "dois", "três", "quatro", "cinco",
+    private static final String[] uni = {"zero", "um", "dois", "três", "quatro", "cinco",
             "seis", "sete", "oito", "nove", "dez", "onze",
             "doze", "treze", "quatorze", "quinze", "dezesseis",
             "dezessete", "dezoito", "dezenove"};
 
 
-    private final String[] dez = {"", "", "vinte", "trinta", "quarenta", "cinquenta"};
+    private static final String[] dez = {"", "", "vinte", "trinta", "quarenta", "cinquenta"};
 
 
     public Horario() {
@@ -28,12 +28,11 @@ public class Horario {
     }
 
     public Horario(int h, int m, int s) {
-        this.hora = 0;
-        this.minuto = 0;
-        this.segundo = 0;
-        this.setHora(h);
-        this.setMinuto(m);
-        this.setSegundo(s);
+        if(!this.setHora(h) || !this.setMinuto(m) || !this.setSegundo(s)){
+            this.hora = 0;
+            this.minuto = 0;
+            this.segundo = 0;
+        }
     }
 
     public boolean setHora(int h) {
@@ -96,7 +95,19 @@ public class Horario {
                         + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
 
             }
+
         }
+
+
+        public int emSegundos(){
+        return this.segundo + this.minuto * 60 + this.hora * 60 * 60;
+        }
+
+
+        public  int diferenca(Horario outro){
+        return Math.abs(this.emSegundos()) - outro.emSegundos());
+        }
+
 
     // String.format
 

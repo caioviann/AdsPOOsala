@@ -9,13 +9,13 @@ public class App {
     public static void main(String[] args) {
 
         Horario h = new Horario(10,10, 11);
-        System.out.println(h.toString());
+        System.out.println(h);
         h.setHora(10);
-        System.out.println(h.toString());
+        System.out.println(h);
         h.setMinuto(20);
-        System.out.println(h.toString());
+        System.out.println(h);
         h.setSegundo(58);
-        System.out.println(h.toString());
+        System.out.println(h);
         h.converterNumeroParaExtenso();
         System.out.println(h.converterNumeroParaExtenso());
 
