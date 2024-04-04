@@ -3,12 +3,16 @@
  */
 package ads.poo;
 
+import java.util.GregorianCalendar;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Data d = new Data(24,12,2024);
+        Data a = new Data(29,05,2019);
+        System.out.println(d);
+        System.out.println(d.escreveExtenso());
+        System.out.println("a diferença entre datas em dias: " + d.diferenca(a));
     }
 }
