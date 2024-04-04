@@ -6,13 +6,21 @@ public class Horario {
     private int minuto;
     private int segundo;
 
-    private static final String[] uni = {"zero", "um", "dois", "três", "quatro", "cinco",
-            "seis", "sete", "oito", "nove", "dez", "onze",
-            "doze", "treze", "quatorze", "quinze", "dezesseis",
-            "dezessete", "dezoito", "dezenove"};
+    private static final String[] HORAS = {"zero", "uma", "duas", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze",
+            "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove", "vinte",
+            "vinte e um", "vinte e dois", "vinte e três"};
 
 
-    private static final String[] dez = {"", "", "vinte", "trinta", "quarenta", "cinquenta"};
+    private static final String[] MINSEG = {"zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze",
+            "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove", "vinte",
+            "vinte e um", "vinte e dois", "vinte e três", "vinte e quatro", "vinte e cinco", "vinte e seis",
+            "vinte e sete", "vinte e oito", "vinte e nove", "trinta", "trinta e um", "trinta e dois",
+            "trinta e três", "trinta e quatro", "trinta e cinco", "trinta e seis", "trinta e sete",
+            "trinta e oito", "trinta e nove", "quarenta", "quarenta e um", "quarenta e dois", "quarenta e três",
+            "quarenta e quatro", "quarenta e cinco", "quarenta e seis", "quarenta e sete", "quarenta e oito",
+            "quarenta e nove", "cinquenta", "cinquenta e um", "cinquenta e dois", "cinquenta e três",
+            "cinquenta e quatro", "cinquenta e cinco", "cinquenta e seis", "cinquenta e sete",
+            "cinquenta e oito", "cinquenta e nove"};
 
 
     public Horario() {
@@ -66,36 +74,18 @@ public class Horario {
     }
 
         public String converterNumeroParaExtenso() {
-            if(hora < 20 && minuto < 20){
-                return uni[hora] + " hora(s) , " +  uni[minuto] + " minuto(s) e "
-                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
-            } else if (hora < 20 && segundo < 20) {
-                return uni[hora] + " hora(s) , "
-                        + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
-                        + uni[segundo] + " segundo(s)";
-            } else if (minuto < 20 && segundo <20) {
-                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
-                        + uni[minuto] + " minuto(s) e" + uni[minuto] + " minuto(s)";
 
-            } else if (minuto > 19 && segundo > 19) {
-                return uni[hora] + " hora(s) , "
-                        + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
-                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
-            }else if(hora > 19 && segundo > 19){
-                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
-                        + uni[minuto] + " minuto(s)"
-                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
-            } else if (hora > 19 && minuto > 19) {
-                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
-                       + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
-                       + uni[segundo] + " segundo(s) ";
-            } else {
-                return dez[hora / 10] + (hora % 10 != 0 ? " e " + uni[hora % 10] : "") + " hora(s) , "
-                        + dez[minuto / 10] + (minuto % 10 != 0 ? " e " + uni[minuto % 10] : "") + " minuto(s) e "
-                        + dez[segundo / 10] + (segundo % 10 != 0 ? " e " + uni[segundo % 10]: "") + " segundo(s)";
+               StringBuilder sb = new StringBuilder();
 
-            }
+               sb.append(HORAS[hora]);
+               sb.append(" horas, ");
+               sb.append(MINSEG[minuto]);
+               sb.append(" minutos e ");
+               sb.append(MINSEG[segundo]);
+               sb.append(" segundos");
 
+
+               return sb.toString();
         }
 
 
@@ -104,8 +94,9 @@ public class Horario {
         }
 
 
-        public  int diferenca(Horario outro){
-        return Math.abs(this.emSegundos()) - outro.emSegundos());
+        public  String diferenca(Horario outro){
+
+        return "A distância entres as horas é: " + Math.abs(this.emSegundos() - outro.emSegundos());
         }
 
 

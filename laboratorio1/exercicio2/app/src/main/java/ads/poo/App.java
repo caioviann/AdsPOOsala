@@ -9,15 +9,18 @@ public class App {
     public static void main(String[] args) {
 
         Horario h = new Horario(10,10, 11);
+        Horario b = new Horario(5,6,46);
         System.out.println(h);
-        h.setHora(10);
+        h.setHora(0);
         System.out.println(h);
-        h.setMinuto(20);
+        h.setMinuto(0);
         System.out.println(h);
-        h.setSegundo(58);
+        h.setSegundo(0);
         System.out.println(h);
-        h.converterNumeroParaExtenso();
+
         System.out.println(h.converterNumeroParaExtenso());
+        System.out.println( h.diferenca(b));
+
 
     }
 }
