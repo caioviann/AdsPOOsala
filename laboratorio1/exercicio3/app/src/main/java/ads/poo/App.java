@@ -7,9 +7,18 @@ public class App {
 
 
     public static void main(String[] args) {
-        Retangulo r = new Retangulo(35,65,"add");
+        Retangulo r = new Retangulo(6,7,"UTF8");
         System.out.println(r.getAltura());
         System.out.println(r.getLargura());
         System.out.println(r.getCodificacao());
+//        r.setAltura(10);
+//        r.setLargura(5);
+//        r.setCodificacao("UTF8");
+//        System.out.println(r.getAltura());
+//        System.out.println(r.getLargura());
+//        System.out.println(r.getCodificacao());
+        System.out.println(r.areaRetangulo());
+        System.out.println(r.perimetro());
+        System.out.println(r);
     }
 }
