@@ -1,4 +1,4 @@
-package exercicio5;
+package ads.poo;
 
 public class Carro {
     private int quantCarros = 0;
@@ -37,6 +37,20 @@ public class Carro {
 
     public void setVelocidadeAtual(int velocidadeAtual) {
         this.velocidadeAtual = velocidadeAtual;
+    }
+
+    public String marcha(){
+        if(velocidadeAtual < 15){
+            return "1 marcha";
+        } else if (velocidadeAtual > 15 && velocidadeAtual < 30){
+            return "2 marcha";
+        } else if (velocidadeAtual > 30 && velocidadeAtual < 55) {
+            return "3 marcha";
+        } else if (velocidadeAtual > 55 && velocidadeAtual < 80) {
+            return "4 marcha";
+        }else {
+            return "5 marcha";
+        }
     }
 
 }

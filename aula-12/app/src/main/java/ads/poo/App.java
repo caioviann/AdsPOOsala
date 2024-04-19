@@ -37,7 +37,8 @@ public class App {
     }
 
     private void excluir(){
-        String matricula = 123;
+        System.out.println("Matrícula do aluno: ");
+        String matricula = teclado.nextLine();
         if(this.bancoDeDados.remove(matricula) == null){
             System.out.println("Não encontrado");
         }else{
@@ -74,6 +75,17 @@ public class App {
     private void listarTodos(){
         System.out.println(this.bancoDeDados);
     }
+    private void listarDados() {
+        System.out.println("Matrícula do aluno: ");
+        String matricula = teclado.nextLine();
+        if(bancoDeDados.get(matricula) != null){
+            System.out.println(bancoDeDados.get(matricula));
+        }else {
+            System.out.println("Aluno não encontrado!");
+        }
+
+
+    }
 
     public static void main(String[] args) {
 
@@ -87,8 +99,8 @@ public class App {
             switch (opcao) {
             case 1 -> app.cadastrar();
             case 2 -> System.out.println("Editando");
-            case 3 -> System.out.println("Excluir");
-            case 4 -> System.out.println("Listando dados");
+            case 3 -> app.excluir();
+            case 4 -> app.listarDados();
             case 5 -> app.listarTodos();
             }
         }while (opcao != 6);
