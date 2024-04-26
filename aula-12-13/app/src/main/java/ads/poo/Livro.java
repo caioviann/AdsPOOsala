@@ -8,6 +8,10 @@ public class Livro {
     private ArrayList<Autor> autores;
     private String isbn;
 
+    public boolean addAutor(Autor a){
+        return this.autores.add(a);
+    }
+
     public Livro(String titulo, Double preco, ArrayList<Autor> autores, String isbn) {
         this.titulo = titulo;
         this.preco = preco;
