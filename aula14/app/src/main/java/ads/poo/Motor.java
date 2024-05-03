@@ -1,4 +1,4 @@
-package org.example;
+package ads.poo;
 
 public class Motor {
     private int cilindradas;

@@ -4,7 +4,10 @@
 package ads.poo;
 
 public class App {
+    private Agenda a = new Agenda();
+
     public static void main(String[] args) {
 
+        
     }
 }

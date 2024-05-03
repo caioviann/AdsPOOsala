@@ -1,4 +1,4 @@
-package org.example;
+package ads.poo;
 
 public class Carro {
     private String cor;
