@@ -45,13 +45,15 @@ public class Contato {
 
     @Override
     public String toString() {
-        return "Contato{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", dataNasc=" + dataNasc +
-                ", telefones=" + telefones +
-                ", emails=" + emails +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        return sb.;
+        for(Telefone t : telefones){
+            sb.append(t);
+        }
+        for(Email e : emails){
+            sb.append(e);
+        }
+
     }
 
     public boolean addTelefone(String r, String n){
@@ -95,3 +97,5 @@ public class Contato {
     }
 
 }
+
+

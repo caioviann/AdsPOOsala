@@ -3,11 +3,50 @@
  */
 package ads.poo;
 
+import java.util.Scanner;
+
 public class App {
+    Scanner teclado = new Scanner(System.in);
+
     private Agenda a = new Agenda();
 
-    public static void main(String[] args) {
+    public int menu(){
+        int opcao = 0;
+        System.out.println("..::Agenda Telefônica::..");
+        System.out.println("1 - Adicionar");
+        System.out.println("2 - Remover");
+        System.out.println("3 - Atualizar");
+        System.out.println("4 - Listar Dados De Contato");
+        System.out.println("5 - Listar Todos Contatos");
+        System.out.println("6 - Para Sair");
+        opcao = teclado.nextInt();
+        teclado.nextLine();
+        return opcao;
+    }
 
+    public boolean adicionar(){
+
+        System.out.print("Digite o nome");
+        String nome = teclado.nextLine();
+        System.out.println("Digite o sobrenome");
+        Contato c = new Contato(nome,);
+    }
+
+    public static void main(String[] args) {
+        App app = new App();
+        int opcao;
+
+        do{
+            opcao = app.menu();
+
+            switch (opcao) {
+                case 1 -> app.adicionar();
+                case 2 -> app.remover();
+                case 3 -> app.atualizar();
+                case 4 -> app.listarDados();
+                case 5 -> app.listarTodos();
+            }
+        }while (opcao != 7);
         
     }
 }

@@ -45,6 +45,6 @@ public class Telefone {
 
     @Override
     public String toString() {
-        return "Telefone{";
+        return "Telefone{" + "rotulo='" + rotulo + '\'' + ", valor='" + valor + '\'' + '}';
     }
 }

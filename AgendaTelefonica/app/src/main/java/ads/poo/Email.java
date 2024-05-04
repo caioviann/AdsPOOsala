@@ -38,9 +38,6 @@ public class Email {
 
     @Override
     public String toString() {
-        return "Email{" +
-                "rotulo='" + rotulo + '\'' +
-                ", valor='" + valor + '\'' +
-                '}';
+        return "Email{" + "rotulo='" + rotulo + '\'' + ", valor='" + valor + '\'' + '}';
     }
 }
