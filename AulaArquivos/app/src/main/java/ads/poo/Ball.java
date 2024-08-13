@@ -3,38 +3,38 @@ package ads.poo;
 import java.util.Objects;
 
 public class Ball {
-    private String tipo;
-    private double tamanho;
-    private double peso;
-    private String cor;
+    private String type;
+    private double size;
+    private double weight;
+    private String color;
 
-    public Ball(String tipo, double tamanho, double peso, String cor) {
-        this.tipo = tipo;
-        this.tamanho = tamanho;
-        this.peso = peso;
-        this.cor = cor;
+    public Ball(String type, double size, double weight, String color) {
+        this.type = type;
+        this.size = size;
+        this.weight = weight;
+        this.color = color;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Ball bola = (Ball) o;
-        return Double.compare(tamanho, bola.tamanho) == 0 && Double.compare(peso, bola.peso) == 0 && Objects.equals(tipo, bola.tipo) && Objects.equals(cor, bola.cor);
+        Ball ball = (Ball) o;
+        return Double.compare(size, ball.size) == 0 && Double.compare(weight, ball.weight) == 0 && Objects.equals(type, ball.type) && Objects.equals(color, ball.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(tipo, tamanho, peso, cor);
+        return Objects.hash(type, size, weight, color);
     }
 
     @Override
     public String toString() {
         return "Bola{" +
-                "tipo='" + tipo + '\'' +
-                ", tamanho=" + tamanho +
-                ", peso=" + peso +
-                ", cor='" + cor + '\'' +
+                "tipo='" + type + '\'' +
+                ", tamanho=" + size +
+                ", peso=" + weight +
+                ", cor='" + color + '\'' +
                 '}';
     }
 }

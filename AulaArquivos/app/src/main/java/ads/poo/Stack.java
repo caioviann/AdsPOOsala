@@ -1,5 +1,8 @@
 package ads.poo;
 
+import exceptions.StackEmptyException;
+import exceptions.StackFullException;
+
 public class Stack<E>{
     private E[] stack;
     private int size;
@@ -13,7 +16,7 @@ public class Stack<E>{
 
     public boolean stackUp(E element) throws Exception {
         if(isFull()){
-            throw new Exception("A Pilha está cheia");
+            throw new StackFullException("A Pilha está cheia");
         }
         stack[++top] = element;
         return  true;
@@ -21,7 +24,7 @@ public class Stack<E>{
 
     public E unstack() throws Exception {
         if(isEmpty()){
-            throw new Exception("A Pilha está vázia");
+            throw new StackEmptyException("A Pilha está vázia");
         }
             E element = stack[top];
             stack[top--] = null;
@@ -31,7 +34,7 @@ public class Stack<E>{
 
     public E getElementTop() throws Exception {
         if(isEmpty()){
-            throw new Exception("A Pilha Está vázia");
+            throw new StackEmptyException("A Pilha Está vázia");
         }
         return stack[top];
     }
